@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using UnitTests.TestDoubles;
-using VirtualService;
+using Mimic;
 
 namespace UnitTests
 {

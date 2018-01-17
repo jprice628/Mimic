@@ -4,7 +4,7 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 using UnitTests.TestDoubles;
-using VirtualService;
+using Mimic;
 
 namespace UnitTests
 {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using VirtualService.Utils;
+using Mimic.Utils;
 
-namespace VirtualService
+namespace Mimic
 {
     /// <summary>
     /// Provides a thread-safe collection for services with specialized 

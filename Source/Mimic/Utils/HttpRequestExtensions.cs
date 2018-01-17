@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.IO;
 
-namespace VirtualService.Utils
+namespace Mimic.Utils
 {
     /// <summary>
     /// Provides a set of extension methods for HttpRequests

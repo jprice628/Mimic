@@ -1,4 +1,4 @@
-﻿namespace VirtualService
+﻿namespace Mimic
 {
     public class ServiceDesc
     {

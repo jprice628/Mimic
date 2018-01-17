@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace VirtualService.Utils
+namespace Mimic.Utils
 {
     /// <summary>
     /// Provides the set of functions that are used in the parsing pipeline. 

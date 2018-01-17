@@ -2,9 +2,9 @@
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using VirtualService.Utils;
+using Mimic.Utils;
 
-namespace VirtualService
+namespace Mimic
 {
     /// <summary>
     /// Represents a virtual service that can be invoked from the outside 

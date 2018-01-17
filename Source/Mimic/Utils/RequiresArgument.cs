@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VirtualService.Utils
+namespace Mimic.Utils
 {
     /// <summary>
     /// Provides a set of methods for validating arguments to functions and 

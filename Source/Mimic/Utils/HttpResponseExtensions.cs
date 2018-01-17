@@ -3,7 +3,7 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VirtualService.Utils
+namespace Mimic.Utils
 {
     /// <summary>
     /// Provides a set of extension methods for HttpResponses

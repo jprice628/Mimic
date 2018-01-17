@@ -1,4 +1,4 @@
-﻿namespace VirtualService
+﻿namespace Mimic
 {
     /// <summary>
     /// Represents interesting information about a service. This is used in 

@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace VirtualService.Utils
+namespace Mimic.Utils
 {
     /// <summary>
     /// A structure for holding state while parsing. This is used primarily 

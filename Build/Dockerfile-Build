@@ -1,6 +1,0 @@
-FROM netcore2buildcontainer:latest
-WORKDIR /build
-COPY ./Source/VirtualService/ ./Source/VirtualService/
-COPY ./Test/UnitTests/ ./Test/UnitTests/
-COPY ./Build.sh .
-ENTRYPOINT ./Build.sh

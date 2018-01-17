@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace VirtualService.Utils
+namespace Mimic.Utils
 {
     // Provides a simple method for constructing a pipeline from a list of functions.
     //

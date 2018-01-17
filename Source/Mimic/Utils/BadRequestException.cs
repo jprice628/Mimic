@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VirtualService.Utils
+namespace Mimic.Utils
 {
     /// <summary>
     /// A type of exception that can be thrown when the service receives a bad 

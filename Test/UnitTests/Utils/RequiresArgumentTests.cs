@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using VirtualService.Utils;
+using Mimic.Utils;
 
 namespace UnitTests.Utils
 {

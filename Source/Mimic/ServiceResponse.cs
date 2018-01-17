@@ -1,4 +1,4 @@
-﻿namespace VirtualService
+﻿namespace Mimic
 {
     /// <summary>
     /// The data necessary for generating a response from a virtual service. 

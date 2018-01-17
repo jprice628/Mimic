@@ -1,4 +1,4 @@
-﻿namespace VirtualService.Utils
+﻿namespace Mimic.Utils
 {
     /// <summary>
     /// Provides a set of methods for validating incoming requests to the 

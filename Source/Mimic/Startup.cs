@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using VirtualService.Utils;
+using Mimic.Utils;
 
-namespace VirtualService
+namespace Mimic
 {
     public class Startup
     {

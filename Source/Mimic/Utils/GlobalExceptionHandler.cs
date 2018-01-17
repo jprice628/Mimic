@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace VirtualService.Utils
+namespace Mimic.Utils
 {
     /// <summary>
     /// Provides general exception handling for the service. The Middleware 

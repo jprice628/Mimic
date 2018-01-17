@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using VirtualService.Utils;
+using Mimic.Utils;
 
 namespace UnitTests.Utils
 {

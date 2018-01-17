@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 
-namespace VirtualService
+namespace Mimic
 {
     public class Program
     {

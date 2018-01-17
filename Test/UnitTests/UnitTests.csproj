@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Source\VirtualService\VirtualService.csproj" />
+    <ProjectReference Include="..\..\Source\Mimic\Mimic.csproj" />
   </ItemGroup>
 
   <ItemGroup>

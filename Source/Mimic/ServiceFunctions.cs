@@ -4,9 +4,9 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using VirtualService.Utils;
+using Mimic.Utils;
 
-namespace VirtualService
+namespace Mimic
 {
     /// <summary>
     /// Provides a set of middleware functions for manipulating services.
