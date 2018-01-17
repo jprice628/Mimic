@@ -1,0 +1,169 @@
+{
+	"variables": [],
+	"info": {
+		"name": "VirtualService",
+		"_postman_id": "a4c54fd7-96e2-f0e1-371c-4715eb82509f",
+		"description": "Includes a set of calls for demonstrating and testing the VirtualService project.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Basics",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Service",
+					"request": {
+						"url": "http://localhost:51769/__vs/services",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "# Basics\nId: 7cfddc3e-7ec8-444c-82b9-cbe83a134fce\n\n# Request\nMethod: POST\nPath: /api/things/53\n\n# Response\nContentType: application/json\nStatusCode: 200\n\n# Body\n{\n\t\"color\":\"Red\",\n\t\"shape\":\"round\"\n}"
+						},
+						"description": "Demonstrates adding a service to VirtualService"
+					},
+					"response": []
+				},
+				{
+					"name": "Invoke Service",
+					"request": {
+						"url": "http://localhost:51769/api/things/53",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor \r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis \r\nnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu \r\nfugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in \r\nculpa qui officia deserunt mollit anim id est laborum."
+						},
+						"description": "Demonstrates invoking the service added by Add Service."
+					},
+					"response": []
+				},
+				{
+					"name": "Query Service",
+					"request": {
+						"url": "http://localhost:51769/__vs/services/7cfddc3e-7ec8-444c-82b9-cbe83a134fce",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Demonstrates querying a service in order to get it's call count and the last message body that was sent."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Service",
+					"request": {
+						"url": "http://localhost:51769/__vs/services/7cfddc3e-7ec8-444c-82b9-cbe83a134fce",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "Demonstrates deleting a service."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Advanced",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Service with Query String",
+					"request": {
+						"url": "http://localhost:51769/__vs/services",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "# Request\nMethod: GET\nPath: /api/things?x=1&y=3\n\n# Response\nContentType: application/json\nStatusCode: 200\n\n# Body\n{\n\t\"color\":\"Red\",\n\t\"shape\":\"round\"\n}"
+						},
+						"description": "Demonstrates adding a service that has a query string to VirtualService."
+					},
+					"response": []
+				},
+				{
+					"name": "Add Service with Body Filter",
+					"request": {
+						"url": "http://localhost:51769/__vs/services",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "# Request\nMethod: POST\nPath: /api/things\nBodyContains: \"color\": \"5678\"\n\n# Response\nContentType: application/json\nStatusCode: 200\n\n# Body\n{\n\t\"name\":\"service2\"\n}"
+						},
+						"description": "Demonstrates adding a service to VirtualService"
+					},
+					"response": []
+				},
+				{
+					"name": "Invoke Service with Body",
+					"request": {
+						"url": "http://localhost:51769/api/things",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"color\": \"5678\"}"
+						},
+						"description": "Demonstrates invoking the service added by Add Service."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Services",
+					"request": {
+						"url": "http://localhost:51769/__vs/services",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "Demonstrates how all services in the application can be deleted at one time.\n\nThis is useful for cleaning up after a set of tests have been run."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RealWorld",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Service - Required Coverage Periods",
+					"request": {
+						"url": "http://192.168.1.200:5000/__vs/services",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "# Basics\n# Id: 7cfddc3e-7ec8-444c-82b9-cbe83a134fce\n\n# Request\nMethod: POST\nPath: /api/loans/322B14B5-B1F9-E711-80EB-0050569E46A0/properties/155554098/requiredcoverageperiods\n\n# Response\nContentType: application/json\nStatusCode: 200\n\n# Body\n{\n   \"baseRequiredPeriods\": [\n       {\n           \"coverageType\": \"CoverageAPrimaryStructureWallsIn\",\n           \"endDate\": \"12-31-9999\",\n           \"peril\": \"Flood\",\n           \"riskType\": \"Gap\",\n           \"startDate\": \"01-01-2012\"\n       },\n       {\n           \"coverageType\": \"CoverageAPrimaryStructureWallsIn\",\n           \"endDate\": \"12-31-9999\",\n           \"peril\": \"Flood\",\n           \"riskType\": \"Lapse\",\n           \"startDate\": \"01-01-2012\"\n       },\n       {\n           \"coverageType\": \"CoverageAPrimaryStructureStructureOnly\",\n           \"endDate\": \"12-31-9999\",\n           \"peril\": \"Flood\",\n           \"riskType\": \"Gap\",\n           \"startDate\": \"01-01-2012\"\n       },\n       {\n           \"coverageType\": \"CoverageAPrimaryStructureStructureOnly\",\n           \"endDate\": \"12-31-9999\",\n           \"peril\": \"Flood\",\n           \"riskType\": \"Lapse\",\n           \"startDate\": \"01-01-2012\"\n       }\n   ],\n   \"requiredPeriods\": [\n       {\n           \"coverageType\": \"CoverageAPrimaryStructureWallsIn\",\n           \"endDate\": \"12-31-9999\",\n           \"peril\": \"Flood\",\n           \"riskType\": \"Gap\",\n           \"startDate\": \"01-01-2012\"\n       },\n       {\n           \"coverageType\": \"CoverageAPrimaryStructureWallsIn\",\n           \"endDate\": \"12-31-9999\",\n           \"peril\": \"Flood\",\n           \"riskType\": \"Lapse\",\n           \"startDate\": \"01-01-2012\"\n       },\n       {\n           \"coverageType\": \"CoverageAPrimaryStructureStructureOnly\",\n           \"endDate\": \"12-31-9999\",\n           \"peril\": \"Flood\",\n           \"riskType\": \"Gap\",\n           \"startDate\": \"01-01-2012\"\n       },\n       {\n           \"coverageType\": \"CoverageAPrimaryStructureStructureOnly\",\n           \"endDate\": \"12-31-9999\",\n           \"peril\": \"Flood\",\n           \"riskType\": \"Lapse\",\n           \"startDate\": \"01-01-2012\"\n       }\n   ],\n   \"undeterminedRequiredPeriods\": [],\n   \"propertyTypePeriods\": [\n       {\n           \"propertyType\": \"SingleFamilyDwelling\",\n           \"startDate\": \"01-01-2010\",\n           \"endDate\": \"12-31-9999\"\n       }\n   ]\n}"
+						},
+						"description": "Demonstrates adding a service to VirtualService"
+					},
+					"response": []
+				},
+				{
+					"name": "Invoke Service - Required Coverage Periods",
+					"request": {
+						"url": "http://192.168.1.200:5000/api/loans/322B14B5-B1F9-E711-80EB-0050569E46A0/properties/155554098/requiredcoverageperiods",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": "Demonstrates invoking the service added by Add Service."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

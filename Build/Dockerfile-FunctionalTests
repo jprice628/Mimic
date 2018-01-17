@@ -1,0 +1,4 @@
+FROM netcore2buildcontainer:latest
+WORKDIR /test
+COPY . .
+ENTRYPOINT ./FunctionalTests.sh
