@@ -1,0 +1,6 @@
+FROM netcore2buildcontainer:latest
+WORKDIR /build
+COPY ./Source/Mimic/ ./Source/Mimic/
+COPY ./Test/UnitTests/ ./Test/UnitTests/
+COPY ./Build.sh .
+ENTRYPOINT ./Build.sh
