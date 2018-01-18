@@ -20,6 +20,9 @@ Currently, the project has a CI/CD pipeline, so as developers change the code, i
 This severely limits the ability to use the tool, so changes will be coming soon that allow it to be consumed in other ways.
 
 ## Latest Releases
+- Build 90
+    - Rebranded from "VirtualService" to Mimic.
+    - Released on [Dockerhub](https://hub.docker.com/r/jprice628/mimic/)
 - Build 83
     - No new operational features.
     - Cleaned up using statements in the code.
@@ -39,7 +42,7 @@ This severely limits the ability to use the tool, so changes will be coming soon
 
 # Basic Usage
 
-Once VirtualService is deployed, it can be programmed using your favorite HTTP tool. If you don't have a tool, you can try [Postman](https://www.getpostman.com/)
+Once Mimic is deployed, it can be programmed using your favorite HTTP tool. If you don't have a tool, you can try [Postman](https://www.getpostman.com/)
 
 ## Adding a Service
 To add a new virtual service, POST it to http://localhost:51769/__vs/services. Be careful not to post services that have the same IDs or method-path combination. Doing so will result in a BadRequest message. When your service is added properly, you will receive an OK response with the ID of your new service. The following is the body of the POST the post message for a sample service.
