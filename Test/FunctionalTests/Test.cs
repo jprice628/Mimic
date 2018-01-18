@@ -7,8 +7,7 @@ namespace FunctionalTests
     [TestClass]
     public class Test
     {
-        //private static readonly Uri BaseUri = new Uri("http://192.168.1.200:5000");
-        private static readonly Uri BaseUri = new Uri("http://calico.mynetgear.com:5000");
+        private static readonly Uri BaseUri = new Uri("http://172.17.0.1:51770/");
 
         private static HttpClient Http = new HttpClient();
 
